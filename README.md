@@ -1,1 +1,1 @@
-# Neflix_clone
+# Netflix_clone
