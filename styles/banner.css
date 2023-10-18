@@ -1,0 +1,117 @@
+.home-banner {
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+}
+
+.home-banner-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.home-banner-title {
+    position: absolute;
+    top: 28%;
+    left: 4%;
+    z-index: 3;
+}
+
+.home-banner-overview {
+    position: absolute;
+    top: 44%;
+    left: 5%;
+    z-index: 3;
+    color: white;
+    width: 400px;
+}
+
+.home-banner-play {
+    position: absolute;
+    top: 51%;
+    left: 5%;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    border:none;
+    border-radius: 5px;
+}
+
+.banner-play-icon {
+    margin-left: 15px;
+    width: 20px;
+    height: 35px;
+    display: flex;
+}
+
+.home-banner-play span {
+    font-size: 17px;
+    margin-left: 14px;
+    margin-top: 3px;
+}
+
+.home-banner-info {
+    background-color: rgb(89, 85, 85);
+    position: absolute;
+    top: 51%;
+    left: 13.5%;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    width: 130px;
+    height: 42px;
+    border:none;
+    border-radius: 5px;
+}
+
+.banner-info-icon {
+    margin-left: 10px;
+    width: 26px;
+}
+
+.home-banner-info span {
+    font-size: 17px;
+    color: white;
+    margin-left: 9px;
+    font-weight: normal;
+}
+
+.banner-right {
+    position: relative;
+    top: 54%;
+    left: 89%;
+    z-index: 3;
+    justify-content: space-between;
+}
+
+.banner-right-button {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    padding: 2px 0 0 0;
+}
+
+.adult-bar {
+    position: absolute;
+    height: 32.5px;
+    width: 90px;
+    border-left: 3px solid rgb(220, 220, 220);
+    background-color: rgb(55, 45, 35);
+    align-items: center;
+}
+
+.adult-bar-icon {
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    top: -1.6px;
+    margin-left: 8px;
+}
