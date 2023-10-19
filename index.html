@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>홈-넷플릭스</title>
+    <title>홈 - 넷플릭스</title>
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/banner.css">
+    <link rel="stylesheet" href="styles/video-selecter.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/custom.js"></script>
 </head>
 <body>
     <header class="header">
@@ -26,10 +29,10 @@
             </div>
         </div>
         <div class="right-section">
-            <button class="search-button">
+            <button class="search-button" onclick="showSearchBar()">
                 <img class="search-icon" src="assets/search.svg">
             </button>
-            <input class="search-bar" type="text" placeholder="제목, 사람, 장르">
+            <input class="search-bar" type="text" placeholder="제목, 사람, 장르" style="display: none;">
             <a class="kids" href="#">키즈</a>
             <button class="notification">
                 <img class="notification-icon" src="assets/notifications.svg">
@@ -41,19 +44,22 @@
             </button>
         </div>
     </header>
-    <main>
+    <main class="main">
         <div class="home-banner">
             <img class="home-banner-img" src="assets/home-banner.jpeg">
+            <div class="banner-gradient"></div>
             <img class="home-banner-title" src="assets/home-banner-title.png">
             <span class="home-banner-overview">세상을 구하기 위해 세상을 파괴할 지도 모르는 선택을 해야 하는 천재 과학자의 핵개발 프로젝트.</span>
-            <button class="home-banner-play">
-                <img class="banner-play-icon" src="assets/play.svg">
-                <span> 재생 </span>
-            </button>
-            <button class="home-banner-info">
-                <img class="banner-info-icon" src="assets/info.png">
-                <span> 상세 정보 </span>
-            </button>
+            <div class="home-banner-left">
+                <button class="home-banner-play">
+                    <img class="banner-play-icon" src="assets/play.svg">
+                    <span> 재생 </span>
+                </button>
+                <button class="home-banner-info">
+                    <img class="banner-info-icon" src="assets/info.png">
+                    <span> 상세 정보 </span>
+                </button>
+            </div>
             <div class="banner-right">
                 <button class="banner-right-button">
                     <img class="banner-right-button-icon" src="assets/refresh.png">
@@ -62,18 +68,226 @@
                     <img class="adult-bar-icon" src="assets/15.png">
             </div>
         </div>
-        <p>d</p>
-        <p>d</p>
-        <p>d</p>
-        <p>d</p>
-        <p>d</p>
-        <p>d</p>
-        <p>d</p>
-        <p>d</p>
-        <p>d</p>
-        <p>d</p>
-        <p>d</p>
-        <p>d</p>
+        <section class="video-selecter">
+            <div class="video-selecter-content">
+                <section class="row-item-section">
+                    <div class="video-row-title-section">
+                        <a class="video-row-title" href="#">넷플릭스 인기 콘텐츠</a>
+                        <a class="video-row-title-more" href="#">더보기 ></a>
+                    </div>
+                    <div class="video-row">
+                        <button id="previousButton"><</button>
+                        <div class="video-row-item">
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/avatar.jpeg">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/주술회전.jpeg">
+                                <img class="top10" src="assets/top10.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/슈츠.jpeg">
+                                <img class="top10" src="assets/top10.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video1.jpeg">
+                                <img class="new-epi" src="assets/new-epi.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video2.jpeg">
+                            </button>
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video3.jpeg">
+                                <img class="top10" src="assets/top10.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video4.jpeg">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video5.jpeg">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video6.jpeg">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video7.jpeg">
+                                <img class="top10" src="assets/top10.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video8.jpeg">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video9.jpeg">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video10.jpeg">
+                                <img class="top10" src="assets/top10.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video11.jpeg">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video12.jpeg">
+                                <img class="new-epi" src="assets/new-epi.png">
+                            </button>
+                        </div>
+                        <button id="nextButton">></button>
+                    </div>
+                </section>
+
+                <section class="row-item-section">
+                    <div class="video-row-title-section">
+                        <a class="video-row-title" href="#">최상원 님이 시청 중인 콘텐츠</a>
+                        <a class="video-row-title-more" href="#">더보기 ></a>
+                    </div>
+                    <div class="video-row">
+                        <button id="previousButton"><</button>
+                        <div class="video-row-item">
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video10.jpeg">
+                                <img class="progress-bar" src="assets/bar3.png">
+                                <img class="top10" src="assets/top10.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video7.jpeg">
+                                <img class="progress-bar" src="assets/bar1.png">
+                                <img class="top10" src="assets/top10.png">
+                                <img class="new-epi" src="assets/new-epi.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video5.jpeg">
+                                <img class="progress-bar" src="assets/bar3.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video11.jpeg">
+                                <img class="progress-bar" src="assets/bar2.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/슈츠.jpeg">
+                                <img class="progress-bar" src="assets/bar3.png">
+                                <img class="top10" src="assets/top10.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/주술회전.jpeg">
+                                <img class="progress-bar" src="assets/bar3.png">
+                                <img class="top10" src="assets/top10.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video9.jpeg">
+                                <img class="progress-bar" src="assets/bar2.png">
+                                <img class="new-epi" src="assets/new-epi.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/avatar.jpeg">
+                                <img class="progress-bar" src="assets/bar3.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video15.jpeg">
+                                <img class="progress-bar" src="assets/bar2.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video16.jpeg">
+                                <img class="new-epi" src="assets/new-epi.png">
+                                <img class="progress-bar" src="assets/bar2.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video13.jpeg">
+                                <img class="progress-bar" src="assets/bar1.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video14.jpeg">
+                                <img class="top10" src="assets/top10.png">
+                                <img class="progress-bar" src="assets/bar3.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video5.jpeg">
+                                <img class="progress-bar" src="assets/bar1.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video6.jpeg">
+                                <img class="new-epi" src="assets/new-epi.png">
+                                <img class="progress-bar" src="assets/bar2.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video8.jpeg">
+                                <img class="progress-bar" src="assets/bar1.png">
+                            </button>
+                        </div>
+                        <button id="nextButton">></button>
+                    </div>
+                </section>
+
+                <section class="row-item-section">
+                    <div class="video-row-title-section">
+                        <a class="video-row-title" href="#">지금 뜨는 콘텐츠</a>
+                        <a class="video-row-title-more" href="#">더보기 ></a>
+                    </div>
+                    <div class="video-row">
+                        <button id="previousButton"><</button>
+                        <div class="video-row-item">
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video12.jpeg">
+                                <img class="new-epi" src="assets/new-epi.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video13.jpeg">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video10.jpeg">
+                                <img class="top10" src="assets/top10.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video14.jpeg">
+                                <img class="top10" src="assets/top10.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video15.jpeg">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video16.jpeg">
+                                <img class="new-epi" src="assets/new-epi.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/주술회전.jpeg">
+                                <img class="top10" src="assets/top10.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video5.jpeg">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video6.jpeg">
+                                <img class="new-epi" src="assets/new-epi.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video7.jpeg">
+                                <img class="top10" src="assets/top10.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video8.jpeg">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video9.jpeg">
+                                <img class="new-epi" src="assets/new-epi.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video3.jpeg">
+                                <img class="top10" src="assets/top10.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video1.jpeg">
+                                <img class="new-epi" src="assets/new-epi.png">
+                            </button>
+                            <button class="video-column-item">
+                                <img class="video-poster" src="assets/video/video4.jpeg">
+                            </button>
+                        </div>
+                        <button id="nextButton">></button>
+                    </div>
+                </section>
+
+            </div>
+        <section/>
     </main>
 </body>
 </html>

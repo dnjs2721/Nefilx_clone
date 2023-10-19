@@ -2,4 +2,23 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: rgb(11, 11, 11);
+}
+
+.main {
+    position: relative;
+}
+
+@media screen and (min-width: 2000px) {
+    .video-selecter {
+        margin-top: 250px;
+    }
+
+    .home-banner {
+        height: 1000px;
+    }
+
+    .home-banner-img {
+        height: 100%;
+    }
 }

@@ -11,7 +11,8 @@
     z-index: 100;
 
     padding: 0 2%;
-    background-color: rgb(11, 11, 11);
+    transition: background-color 0.5s ease;
+    background-color: rgba(11, 11, 11, 0);
 }
 
 .left-section {
@@ -74,8 +75,10 @@
 .search-bar {
     background-color: transparent;
     border: 1px solid white;
-    height: 30px;
+    height: 25px;
     width: 250px;
+    overflow: hidden;
+    color: white;
 }
 
 .search-bar::placeholder {
@@ -123,4 +126,8 @@
     position: absolute;
     top: 5px;
     width: 16px;
+}
+
+.scrolled {
+    background-color: rgba(11, 11, 11, 1);
 }
